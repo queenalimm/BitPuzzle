@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="http://127.0.0.1:8080/manifest.json">
+    <title>BitPuzzle: Cryptography Conundrums</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Content Section -->
+    <div id="game-container">
+
+        <!-- Logo Section -->
+        <img src="logo.png" alt="BitPuzzle Logo" id="game-logo">
+
+        <!-- Game Title -->
+        <h1>BitPuzzle: Cryptography Conundrums</h1>
+
+        <!-- Nickname Input -->
+        <label for="nickname">Enter your nickname: </label>
+        <input type="text" id="nickname" placeholder="Your Nickname">
+
+        <!-- Scoreboard -->
+        <div id="scoreboard">Score: 0 | Blockchain Strength: 0</div>
+
+        <!-- Game Buttons -->
+        <div class="flex-parent jc-center" id="game-buttons-container">
+            <button id="startGameBtn" class="game-button">Start Game</button>
+            <button id="solvePuzzleBtn" class="game-button">Solve Puzzle</button>
+            <button id="mineBlockBtn" class="game-button">Mine Block</button>
+            <button id="secureTransactionBtn" class="game-button">Secure Transaction</button>
+            <button id="gameRulesBtn">Game Rules</button>
+        </div>
+
+        <!-- Signature Canvas -->
+        <canvas id="signature-canvas" width="200" height="50"></canvas>
+
+        <!-- Output Section -->
+        <div id="output"></div>
+
+    </div>
+
+    <!-- Rules Modal Section -->
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="game-rules">
+                <h2>Welcome to BitPuzzle!</h2>
+
+                <h3>Game Rules:</h3>
+                <!-- Game Rules -->
+                <ol>
+                    <li><strong>Start Game:</strong> Click the "Start Game" button to initiate your cryptographic journey. This marks the beginning of the game, where you'll face various challenges related to blockchain and cryptography.</li>
+                    <li><strong>Solve Puzzle:</strong> Utilize your cryptographic skills to decrypt challenging puzzles. Each successfully solved puzzle advances your progress in the game.</li>
+                    <li><strong>Mine Block:</strong> Enhance your blockchain strength by clicking the "Mine Block" button. Mining blocks contributes to the overall strength of your blockchain in the game.</li>
+                    <li><strong>Secure Transaction:</strong> Safely conduct transactions by clicking the "Secure Transaction" button. Successfully completing secure transactions adds points to your score.</li>
+                    <li><strong>Have Fun and Enjoy the Journey:</strong> BitPuzzle is more than just a game; it's an exploration into the fascinating worlds of blockchain and cryptography. Embrace the challenges presented, enjoy the journey, and aim for high scores! Consider BitPuzzle as an adventure that combines entertainment with educational elements.</li>
+                </ol>
+
+
+                <p>Best of luck on your BitPuzzle adventure!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Section -->
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(registration => {
+                    console.log('Service Worker registered with scope:', registration.scope);
+                })
+                .catch(error => {
+                    console.error('Service Worker registration failed:', error);
+                });
+        }
+    </script>
+</body>
+</html>

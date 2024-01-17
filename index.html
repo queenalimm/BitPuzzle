@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BitPuzzle: Cryptography Conundrums</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Main Content Section -->
+    <div id="game-container">
+
+        <!-- Logo Section -->
+        <img src="logo.png" alt="BitPuzzle Logo" id="game-logo">
+
+        <!-- Game Title -->
+        <h1>BitPuzzle: Cryptography Conundrums</h1>
+
+        <!-- Nickname Input -->
+        <label for="nickname">Enter your nickname: </label>
+        <input type="text" id="nickname" placeholder="Your Nickname">
+
+        <!-- Scoreboard -->
+        <div id="scoreboard">Score: 0 | Blockchain Strength: 0</div>
+
+        <!-- Game Buttons -->
+        <div class="flex-parent jc-center" id="game-buttons-container">
+            <button id="startGameBtn" class="game-button">Start Game</button>
+            <button id="solvePuzzleBtn" class="game-button">Solve Puzzle</button>
+            <button id="mineBlockBtn" class="game-button">Mine Block</button>
+            <button id="secureTransactionBtn" class="game-button">Secure Transaction</button>
+            <button id="gameRulesBtn">Game Rules</button>
+        </div>
+
+        <!-- Signature Canvas -->
+        <canvas id="signature-canvas" width="200" height="50"></canvas>
+
+        <!-- Output Section -->
+        <div id="output"></div>
+
+    </div>
+
+    <!-- Rules Modal Section -->
+    <div id="rulesModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="game-rules">
+                <h2>Welcome to BitPuzzle!</h2>
+
+                <h3>Game Rules:</h3>
+
+                <!-- Rule Points -->
+                <p>1. Embark on Your Blockchain Journey: <br>- Start your journey with BitPuzzle by entering a unique nickname. <br>- Solve puzzles to earn points and increase your blockchain strength.</p>
+
+                <p>2. Puzzle-Solving Adventure: <br>- Decrypt encrypted phrases using your cryptographic skills. <br>- Each correct answer earns you points, boosting your overall score.</p>
+
+                <p>3. Mining Blocks for Strength: <br>- Engage in the mining process by solving algebra questions. <br>- Successfully mined blocks not only add points but also strengthen your blockchain.</p>
+
+                <!-- Add more rule points as needed -->
+
+                <p>7. Have Fun and Enjoy the Journey: <br>- BitPuzzle is not just a game; it's an adventure into the world of blockchain and cryptography. <br>- Enjoy the challenges, embrace the journey, and strive for high scores!</p>
+
+                <p>Best of luck on your BitPuzzle adventure!</p>
+            </div>
+        </div>
+    </div>
+
+
+<div id="puzzleModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closePuzzleModal()">&times;</span>
+        <div id="puzzleContent">Replace this text with your puzzle</div>
+        <input type="text" id="puzzleInput" placeholder="Your Answer">
+        <button id="puzzleSubmitBtn">Submit</button>
+    </div>
+</div>
+
+    <!-- Script Section -->
+    <script src="script.js"></script>
+</body>
+</html>
