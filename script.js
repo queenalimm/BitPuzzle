@@ -273,7 +273,7 @@ function solvePuzzle() {
 
                 // Check if the target score is reached
                 if (totalScore >= targetScore) {
-                    puzzleCode = generatePuzzleCode();
+                    puzzleCode = "4037BELH";
                     displayOutput(`Congratulations! You've reached ${targetScore} points.`);
                     displayOutput(`Here is your puzzle code: ${puzzleCode}. REMEMBER this code to secure your transaction. Proceed to Mine Block to continue your journey.`);
                     return;
@@ -294,28 +294,6 @@ function solvePuzzle() {
     displayOutput(`Puzzles incomplete! Try again next time!`);
 }
 
-
-
-function generatePuzzleCode() {
-    // Generate a puzzle code with 4 letters and 4 digits
-    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    const digits = '0123456789';
-    
-    let code = '';
-    
-    for (let i = 0; i < 4; i++) {
-        code += letters.charAt(Math.floor(Math.random() * letters.length));
-    }
-    
-    for (let i = 0; i < 4; i++) {
-        code += digits.charAt(Math.floor(Math.random() * digits.length));
-    }
-    
-    // Shuffle the characters in the code
-    code = code.split('').sort(() => Math.random() - 0.5).join('');
-    
-    return code;
-}
 
 const algebraQuestionsWithAnswers = [
     { question: "Solve for x: (2x + 5) - 3 = 10 (Provide your answer in whole number)", answer: "4" },
@@ -377,7 +355,7 @@ function mineBlock() {
 
                     // Check if the target blockchain strength is reached
                     if (currentPlayer.blockchainStrength >= 50) {
-                        const blockCode = generateBlockCode();
+                        const blockCode = "1997BPCT";
                         displayOutput(`Congratulations! You reached a blockchain score of 50. Here is your block code: ${blockCode}. REMEMBER this code to secure your transaction.`);
                         updateScoreboard();
                         clearSignatureCanvas();
@@ -407,26 +385,6 @@ function mineBlock() {
     clearSignatureCanvas();
 }
 
-function generateBlockCode() {
-    const digits = '0123456789';
-    const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-
-    let code = '';
-
-    for (let i = 0; i < 4; i++) {
-        code += letters.charAt(Math.floor(Math.random() * letters.length));
-    }
-
-    for (let i = 0; i < 4; i++) {
-        code += digits.charAt(Math.floor(Math.random() * digits.length));
-    }
-
-    // Shuffle the characters in the code
-    code = code.split('').sort(() => Math.random() - 0.5).join('');
-
-    return code;
-}
-
 
 
 
@@ -437,26 +395,26 @@ function secureTransaction() {
     const currentPlayer = getCurrentPlayer();
     if (!currentPlayer) return;
 
-    const puzzleCode = currentPlayer.puzzleCode;
-    const blockCode = currentPlayer.blockCode;
+    const correctPuzzleCode = "4037BELH";
+    const correctBlockCode = "1997BPCT";
 
     const userPuzzleCode = prompt("Enter your puzzle code:");
     const userBlockCode = prompt("Enter your block code:");
 
-    if (userPuzzleCode === puzzleCode && userBlockCode === blockCode) {
+    if (userPuzzleCode === correctPuzzleCode && userBlockCode === correctBlockCode) {
         currentPlayer.score += 15;
         displayOutput("Transaction secured! +15 points.");
     } else {
-        displayOutput("Invalid token! Transaction not accepted. Make sure to enter correct and valid codes.");
+        displayOutput("Transaction failed! Make sure to enter correct and valid codes.");
         displayOutput("If you've lost your codes, retrieve them by solving puzzles and mining blocks.");
     }
 
-    // Reset codes after transaction attempt
+    // Reset codes after either successful or failed attempts
     currentPlayer.puzzleCode = null;
     currentPlayer.blockCode = null;
-
     updateScoreboard();
 }
+
 
 
 
