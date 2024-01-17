@@ -318,11 +318,11 @@ function generatePuzzleCode() {
 }
 
 const algebraQuestionsWithAnswers = [
-    { question: "Solve for x: (2x + 5) - 3 = 10 (Provide your answer as fraction)", answer: "4/2" },
-    { question: "Solve for y: 4y + (7 - 2y) = 18 (Provide your answer as rounded decimal)", answer: "2.75" },
-    { question: "Solve for a: (3a - 2) * 5 = 25 (Provide your answer as fraction)", answer: "5/3" },
-    { question: "Solve for b: 2b + 4 = (6 - b) * 3 (Provide your answer as rounded decimal)", answer: "1.5" },
-    { question: "Solve for c: 8 + 2c = (5c + 3) - 1 (Provide your answer as fraction)", answer: "2/3" },
+    { question: "Solve for x: (2x + 5) - 3 = 10 (Provide your answer in whole number)", answer: "4" },
+    { question: "Solve for y: 4y + (7 - 2y) = 18 (Provide your answer as rounded decimal)", answer: "5.5" },
+    { question: "Solve for a: (3a - 2) * 5 = 25 (Provide your answer as fraction)", answer: "7/3" },
+    { question: "Solve for b: 2b + 4 = (6 - b) * 3 (Provide your answer as rounded decimal)", answer: "2.8" },
+    { question: "Solve for c: 8 + 2c = (5c + 3) - 1 (Provide your answer in whole number)", answer: "2" },
 ];
 
 let usedAlgebraQuestions = [];
