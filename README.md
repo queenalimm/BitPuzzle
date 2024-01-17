@@ -63,6 +63,7 @@ Welcome to BitPuzzle, an exciting game that takes you on an adventure into the w
 
 ### Securing Transactions
 - Click the "Secure Transaction" button to enter puzzle and block codes.
+- Make sure to enter the codes twice.
 - Secure transactions to earn additional points.
 
 ## Player Management
@@ -97,6 +98,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 For questions or feedback, contact the developer:
-- queena2512@gmail.com - Queena Lim
-- syazz.snow@gmail.com - Mohamad Syazmin
-- amirahakma24@gmail.com - Amirah Akma
+- Email: queena2512@gmail.com
