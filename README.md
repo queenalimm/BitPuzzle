@@ -97,4 +97,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Contact
 For questions or feedback, contact the developer:
-- Email: queena2512@gmail.com
+- queena2512@gmail.com - Queena Lim
+- syazz.snow@gmail.com - Mohamad Syazmin
+- amirahakma24@gmail.com - Amirah Akma
